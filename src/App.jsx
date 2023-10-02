@@ -15,9 +15,6 @@ class App extends Component {
       .then(response => {
         const { url, title, explanation } = response.data;
         this.setState({ imageUrl: url, title, explanation });
-      })
-      .catch(error => {
-        console.error('Error, no such data.', error);
       });
   }
 
