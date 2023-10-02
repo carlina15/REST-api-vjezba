@@ -15,6 +15,7 @@ class App extends Component {
       .then(response => {
         const { url, title, explanation } = response.data;
         this.setState({ imageUrl: url, title, explanation });
+  
       });
   }
 
