@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Image({ url, title }) {
+function Photo({ url, title }) {
   return (
     <div>
       <img src={url} alt={title} />
@@ -8,4 +8,4 @@ function Image({ url, title }) {
   );
 }
 
-export default Image;
+export default Photo;

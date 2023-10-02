@@ -14,9 +14,11 @@ class App extends Component {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
       .then(response => {
         const { url, title, explanation } = response.data;
-        this.setState({ imageUrl: url, title, explanation });
-  
-      });
+        this.setState({ imageUrl: url, title, explanation })
+      })
+      .catch(error => {
+          console.error('Error, no such data.', error);
+      });   
   }
 
   render() {
